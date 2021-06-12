@@ -1,0 +1,16 @@
+.foodIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 10vh;
+  position: relative;
+  top: 10px;
+}
+li {
+  flex-basis: calc(25% - 20px);
+}
+.food-icons {
+  border: 1px solid moccasin;
+  height: 100px;
+  width: 100px;
+}

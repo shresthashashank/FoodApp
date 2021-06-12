@@ -1,0 +1,29 @@
+.food-search {
+  width: 500px;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  border: 2px solid salmon;
+  border-radius: 50px 0px 0px 50px;
+  height: 35px;
+}
+.location {
+  width: 200px;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  height: 35px;
+  border: 2px solid salmon;
+  border-radius: 0px 50px 50px 0px;
+}
+.search {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.search-icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 30%;
+  left: 77%;
+}

@@ -1,0 +1,25 @@
+.bigOffer {
+  height: 100vh;
+  width: 45%;
+  border: 1px solid black;
+  position: relative;
+  top: 150px;
+  left: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h1 {
+  color: orange;
+}
+
+img {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 90%;
+  width: 90%;
+}
+.OfferText {
+  position: relative;
+  top: 120px;
+}

@@ -1,0 +1,343 @@
+POST http://localhost:8001/restaurants/
+Content-Type: application/json
+
+{
+    "food":0,
+    "service":4.0,
+    "environment":0.5,
+    "price":0.6,
+    "comment":"terrible"
+}
+
+
+
+
+###
+
+GET http://localhost:8001/restaurants/
+
+###
+
+DELETE http://localhost:8001/restaurants/60bc076adbe82a46bc8cd2d3
+###
+GET http://localhost:8001/main/restuarants/search
+
+###
+
+GET http://localhost:8001/restaurants/60bbcb208b418e5fcccf2dd2/reviews
+
+
+###
+
+POST http://localhost:8001/restaurants/
+Content-Type: application/json
+
+{
+    "name":"Oscar's Restaurant",
+    "Hours":{
+        "start":"12 AM",
+        "end":"9:30 PM"
+    },
+    "Location":{
+        "state":"Oklahoma",
+        "city":"Ada",
+        "zipCode":74820,
+        "address":"123 Main Street"
+    },
+    
+    "menu":{
+        "name":"Fried Rice",
+        "unit_price":6.99,
+        "type":"plate"
+    }
+
+}
+###
+
+PATCH http://localhost:8001/restaurants/60bbbf6787b4924d049e1489
+Content-Type: application/json
+
+{
+    "name":"Rise and Shine Donuts ONLY",
+    "Hours":{
+        "start":"4 AM",
+        "end":"11 PM"
+    },
+    "Location":{
+        "state":"Virginia",
+        "city":"Arlington",
+        "zipCode":75013,
+        "address":"1621 W Hover Ln"
+    },
+    "Food_type":{
+        "seafood":"Everything",
+        "mediterranian":"None",
+        "dessert":"Everything is avaiablee on desserts1"
+    }
+
+}
+
+###
+
+
+DELETE http://localhost:8001/restaurants/60bbd04bb9837358941bb6de/reviews
+
+###
+
+POST http://localhost:8001/auth/login
+Content-Type: application/json
+
+{
+    "email": "abc@gmail.com",
+    "password":"pass"
+
+}
+###
+
+POST http://localhost:8001/auth/register
+Content-Type: application/json
+
+{
+    "name":"Dwayne JOhson",
+    "email":"dwayne@johnson.com",
+    "password":"dj"
+
+}
+###
+POST http://localhost:8001/auth/login 
+Content-Type: application/json
+
+{
+    "email": "a@a.coms",
+    "password": "abc123"
+}
+
+###
+GET http://localhost:8001/auth/register
+
+###
+GET http://localhost:8001/users/60bd2eeb4dded242aca23c63/reviews
+
+
+###
+POST http://localhost:8001/restaurants/60bf93fcaee0b2442495b7ce/reviews
+Content-Type: application/json
+
+{
+    "food":2.6,
+    "service": 2.3,
+    "environment":3.1,
+    "price": 3.1,
+    "comment":"The restaurant was decent enough." 
+
+}
+
+###
+//Listing restaurant reviews
+GET http://localhost:8001/restaurants/60bf93fcaee0b2442495b7ce/reviews
+
+###
+POST http://localhost:8001/60bc08781ec36039649131e9/reviews/reviews
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+//Placing an order , ID is oscar restaurant's id = 60bf93fcaee0b2442495b7ce
+//User ID - 60bd53914dded242aca23c66 Name: Dwayne JOhson
+POST http://localhost:8001/restaurants/60bf93fcaee0b2442495b7ce/orders
+Content-Type: application/json
+
+{
+    "restaurant_id":"60bf93fcaee0b2442495b7ce",
+    "user_id":"60bd53914dded242aca23c66",
+    "items":["Momo" , "Chowmein" , "Thukpa"],
+    "Subtotal":"$20.50"
+}
+###
+//Getting a list of order
+GET  http://localhost:8001/restaurants/60bf93fcaee0b2442495b7ce/orders
+
+###
+GET  http://localhost:8001/restaurants/60bf93fcaee0b2442495b7ce/orders/60bd53914dded242aca23c66
+
+//////////////////////////////////////////////////////////////////////////////////////////
+###
+// 1 ) Registering A User (POST)
+
+POST http://localhost:8001/auth/register
+Content-Type: application/json
+
+{
+  
+    "name":"Test",
+    "email":"test@test.com",
+    "password":"test"
+
+
+}
+
+###
+// 2) Login User (POST)
+
+POST http://localhost:8001/auth/login
+Content-Type: application/json
+
+{
+    "email":"test@test.com",
+    "password":"test"
+
+}
+
+###
+// a) Get all user info (GET)
+GET http://localhost:8001/users
+
+###
+
+###
+
+// 3) Get a specific user based on their ID
+GET http://localhost:8001/users/60bd2353f07a373460999dca
+
+###
+
+// 4) Create a restaurant (POST)
+POST http://localhost:8001/restaurants/
+Content-Type: application/json
+
+{
+    "name":"Pizzereia Unloaded",
+    "image":"https://media.giphy.com/media/xULW8nwoptcyRuZHz2/giphy.gif",
+    "Hours":{
+        "start":"10:00 AM",
+        "end":"11:00 PM"
+    },
+    "Location":{
+        "state":"Montanna",
+        "city":"Helena",
+        "zipCode":31457,
+        "address":"Lake Montanna"
+    },
+    
+    "menu":{
+        "name":"Pizza",
+        "unit_price":"6.99",
+        "type":"Order"
+    }
+
+}
+
+
+###
+// 5) Update a restaurant (PATCH) 
+//GET http://localhost:8001/restaurants/ -> This gets all restaurants
+PATCH http://localhost:8001/restaurants/60c2489c025195493c9bc3eb
+Content-Type: application/json
+
+{
+      "name": "Shashank's Kitchen",
+      "image":"https://media.giphy.com/media/RA1mgsgmlwv2lWYrFC/giphy.gif",
+      "Hours": {
+        "start": "12 PM",
+        "end": "9:30 PM"
+      },
+      "Location": {
+        "state": "Dallas",
+        "city": "Texas",
+        "zipCode": 75007,
+        "address": "32 Main Street"
+      },
+      "menu": {
+        "name": "Pizza",
+        "unit_price": "7.99",
+        "type": "Order"
+      },
+      "_id": "60c2489c025195493c9bc3eb",
+      "name": "Shashank's Kitchen",
+      "__v": 0
+    }
+###
+GET http://localhost:8001/restaurants
+
+###
+
+// 6) Deleting a restaurant
+
+DELETE http://localhost:8001/restaurants/60c27ff9933b4426e063309d
+
+###
+
+// 7) Get restaurant info
+GET http://localhost:8001/restaurants/60c246f40ce7b93d940dad6f
+
+###
+
+//8) List all orders of a restaurant
+
+GET  http://localhost:8001/restaurants/60bfa8cbf5bbe54da86ef0f9/orders
+
+###
+
+//9) Place an order
+
+POST http://localhost:8001/restaurants/60bd155699c9452274a0b55b/orders
+Content-Type: application/json
+
+{
+    "restaurant_id":"60bfa8cbf5bbe54da86ef0f9",
+    "user_id":"60bd155699c9452274a0b55b",
+    "items":["Burger" , "Spices" , "Msutard"],
+    "subtotal":"$19.50"
+}
+
+###(needs update)
+//10) List orders placed by a specific user on a restaurant
+GET http://localhost:8001/restaurants/60bc08781ec36039649131e9/orders/60bd155699c9452274a0b55b
+
+###(needs update)
+//11) List order placed by a user (on any restaurant)
+
+GET http://localhost:8001/users/60bfb1cbf6c5cf59c8b6fdad/orders
+
+###
+//12) List reviews placed by a user(on any restaurant)
+GET http://localhost:8001/users/60bd2eeb4dded242aca23c63/reviews
+
+###
+GET http://localhost:8001/reviews
+
+###
+//13) Get reviews placed by a specific user
+GET http://localhost:8001/users/60bfa5145548075f70b23f87/reviews
+
+###
+
+//14) Post restaurant's review
+//POSting review for oscar's restaurant -> ID - 60bfb4009e79725438ef6c40
+// USer is Test , ID -> 60bfa5145548075f70b23f87
+POST http://localhost:8001/restaurants/60bbca613e911100d4d41540/reviews
+Content-Type: application/json
+
+{
+    "restaurant_id":"60bfb4009e79725438ef6c40",
+    "user_id":"60bfa5145548075f70b23f87",
+    "food":3.7,
+    "service": 2.3,
+    "environment":3.1,
+    "price": 3.1,
+    "comment":"The restaurant OSCAR was decent enough but the fried rice was great." 
+
+}
+
+###
+//15) List restaurant review
+GET http://localhost:8001/restaurants/60bfba06dae0a83cec9874d1/reviews
+
+###
+//16 Delete restaurant review
+
+DELETE http://localhost:8001/restaurants/60bfa5145548075f70b23f87/reviews/60bfb5f89e79725438ef6c41

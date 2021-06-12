@@ -1,0 +1,31 @@
+.authbg {
+  background-color: orangered;
+  height: 100vh;
+}
+
+.login,
+.register-form {
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+}
+.login-form {
+  border: 1px solid black;
+  position: absolute;
+  top: 50vh;
+  left: 20vh;
+  margin: 5px;
+  padding: 10px;
+}
+
+.register-form {
+  position: absolute;
+  top: 50vh;
+  right: 50vh;
+  margin: 5px;
+  padding: 10px;
+}
+
+.link {
+  color: black;
+}
