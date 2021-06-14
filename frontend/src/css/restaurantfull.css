@@ -1,0 +1,48 @@
+.img-res,
+.res-details {
+  height: 500px;
+  width: 60%;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative;
+  bottom: -100px;
+}
+.tiles {
+  border: 1px solid black;
+  display: flex;
+  float: left;
+  width: 100%;
+  position: absolute;
+  bottom: -12%;
+  height: 12%;
+  background-color: rgb(252, 134, 0);
+}
+.order,
+.gallery,
+.review,
+.overview {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+}
+.res-details {
+  width: 100%;
+  position: absolute;
+  top: 557px;
+}
+.name {
+  width: 50%;
+  float: left;
+  position: absolute;
+  left: 25%;
+}
+.left-details,
+.right-details {
+  /* border: 2px solid salmon; */
+  width: 25%;
+  height: 100%;
+  padding: 15px;
+}
+.left-details {
+  float: right;
+}

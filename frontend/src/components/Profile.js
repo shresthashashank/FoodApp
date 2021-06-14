@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import { Redirect } from "react-router-dom";
 import Banner from "./Banner";
@@ -19,4 +20,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default withRouter(Profile);

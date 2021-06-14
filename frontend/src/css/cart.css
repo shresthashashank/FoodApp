@@ -1,0 +1,9 @@
+.order-header {
+  float: left;
+  margin: 15px;
+  border-top: 1px solid black;
+  padding: 5px;
+}
+.order-history {
+  border-top: 1px solid black;
+}

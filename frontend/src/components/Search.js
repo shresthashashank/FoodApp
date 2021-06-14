@@ -52,7 +52,7 @@ function Search() {
   return (
     <div>
       <div className="navbarlogin">
-        <Navbarlogin greeting="Welcome" />
+        <Navbarlogin greeting="SIGN IN " />
         <Searchbarlogin />
       </div>
       <br />
@@ -64,18 +64,22 @@ function Search() {
           you ${item.menu.unit_price}
         </li> */}
 
-      {searchData.map((x) => {
-        return (
-          <RestaurantCards
-            key={x._id}
-            id={x._id}
-            name={x.name}
-            image={x.image}
-            state={x.Location.state}
-            city={x.Location.city}
-          />
-        );
-      })}
+      {searchData.length > 0 ? (
+        searchData.map((x) => {
+          return (
+            <RestaurantCards
+              key={x._id}
+              id={x._id}
+              name={x.name}
+              image={x.image}
+              state={x.Location.state}
+              city={x.Location.city}
+            />
+          );
+        })
+      ) : (
+        <h2> No restaurants found where {foodName} is avaiable. Sorry!</h2>
+      )}
 
       {/* <RestaurantCards data={searchData} />
       <br />
@@ -102,7 +106,6 @@ function Search() {
           filtered_restaurant_name
       );
       // setSearchData(filtered_restaurant_name);
-
       //console.log("Filtered_restaurant names : " + filtered_restaurant_name); */}
     </div>
   );

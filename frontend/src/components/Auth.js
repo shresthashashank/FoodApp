@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+
 import "../css/auth.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 const bcrypt = require("bcryptjs");
 
-function Auth() {
+function Auth(props) {
   const history = useHistory();
   // const [email, setEmail] = useState("");
 
@@ -38,8 +39,12 @@ function Auth() {
           isLoggedIn = true;
           console.log(res.data);
         }
+        var isLoggedinvalue = isLoggedIn;
 
-        isLoggedIn ? history.push("/profile") : alert(res.data.message);
+        //Passing the value back to the parent component app.
+        props.data(isLoggedIn);
+
+        isLoggedinvalue ? history.push("/profile") : alert(res.data.message);
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +56,8 @@ function Auth() {
       <div className="login">
         <form onSubmit={login} className="login-form">
           <div>
-            <h1>LOGIN</h1>
+            <h1 className="login-head">LOGIN</h1>
+            <br />
           </div>
           {/* <label for="name">Name</label>
           <input type="name" name="name" id="name"></input>
@@ -79,7 +85,7 @@ function Auth() {
         </form>
       </div>
 
-      <div>
+      <div className="signuplink">
         <Link className="links" to="/auth/register">
           Sign UP
         </Link>

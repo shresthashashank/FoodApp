@@ -1,23 +1,36 @@
 .authbg {
-  background-color: orangered;
   height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
 }
-
+.register-bg {
+  background-image: url("https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+}
+.login-head {
+  color: black;
+}
 .login,
 .register-form {
   border: 1px solid black;
-  position: absolute;
-  top: 0;
 }
 .login-form {
   border: 1px solid black;
   position: absolute;
-  top: 50vh;
-  left: 20vh;
+  top: 20%;
+  left: 35%;
   margin: 5px;
   padding: 10px;
+  height: 400px;
+  width: 400px;
+  background: white;
+  opacity: 90%;
+  border-radius: 15px 15px 15px 15px;
 }
-
+input {
+  padding: 10px;
+  margin: 10px;
+}
 .register-form {
   position: absolute;
   top: 50vh;
@@ -28,4 +41,7 @@
 
 .link {
   color: black;
+}
+.linksa {
+  font-size: 300px;
 }

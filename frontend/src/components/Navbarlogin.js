@@ -9,8 +9,10 @@ function Navbarlogin(props) {
         {" "}
         <div>
           {" "}
-          <Link className="linksLogin onea" to="#">
-            {props.greeting}
+          <Link className="linksLogin onea" to="/">
+            <button onClick={console.log("Loggeed out")}>
+              {props.greeting}
+            </button>
           </Link>
         </div>
         <div>
@@ -38,6 +40,7 @@ function Navbarlogin(props) {
         <img
           className="logo"
           src="https://www.jplcomputer.co.uk/wp-content/uploads/2020/07/logo.png"
+          alt="img"
         ></img>
       </Link>
     </div>

@@ -31,6 +31,7 @@ function Navbar(props) {
         <img
           className="logo"
           src="https://www.jplcomputer.co.uk/wp-content/uploads/2020/07/logo.png"
+          alt="img"
         ></img>
       </Link>
     </div>
