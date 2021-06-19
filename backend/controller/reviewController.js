@@ -7,7 +7,7 @@ var mongoose = require("mongoose"),
 exports.list_all_reviews = function (req, res) {
   Reviews.find({}, function (err, task) {
     if (err) res.send(err);
-    res.json(task);
+    res.json({ review: task });
   });
 };
 
@@ -20,7 +20,7 @@ exports.post_a_review = function (req, res) {
 };
 
 exports.read_a_review = function (req, res) {
-  Reviews.findById(req.params.id, function (err, task) {
+  Reviews.findOne({ _id: req.params.id }, function (err, task) {
     if (err) res.send(err);
     res.json(task);
   });

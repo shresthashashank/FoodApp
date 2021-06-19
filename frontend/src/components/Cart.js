@@ -5,7 +5,7 @@ import "../css/cart.css";
 function Cart() {
   return (
     <div>
-      <Navbarlogin />
+      <Navbarlogin greeting="Logout" />
       <div>
         <br />
         <br />

@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbarlogin.css";
 
-function Navbarlogin(props) {
+function Navbarsearched(props) {
   return (
     <div className="navBarLogin">
       <div className="nav-itemsLogin">
         {" "}
         <div>
           {" "}
-          <Link className="linksLogin onea" to="/">
+          <Link className="linksLogin onea" to="/auth/login">
             {props.greeting}
           </Link>
         </div>
@@ -45,4 +45,4 @@ function Navbarlogin(props) {
   );
 }
 
-export default Navbarlogin;
+export default Navbarsearched;

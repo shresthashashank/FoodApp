@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../css/restaurantfull.css";
 import CustomizedDialogs from "../components/CustomizedDialogs";
+import { ThemeContext } from "../components/Auth";
 
 function RestaurantFull(props) {
+  var isLogged = props.status;
   return (
     <>
       <div className="img-res">
@@ -11,14 +13,16 @@ function RestaurantFull(props) {
         <div className="tiles">
           <div className="overview">OVEVIEW</div>
           <div className="order">
-            <CustomizedDialogs
-              name={props.name}
-              menu={props.menu}
-              state={props.state}
-              city={props.city}
-              menu={props.menu}
-              price={props.price}
-            />
+            {isLogged ? (
+              <CustomizedDialogs
+                name={props.name}
+                menu={props.menu}
+                state={props.state}
+                city={props.city}
+                menu={props.menu}
+                price={props.price}
+              />
+            ) : null}
           </div>
           <div className="gallery">GALLERY</div>
           <div className="review">REVIEWS</div>

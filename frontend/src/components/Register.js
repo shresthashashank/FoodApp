@@ -5,52 +5,54 @@ import "../css/auth.css";
 
 function Register() {
   return (
-    <div className="register-bg">
-      <div className="register">
-        <form onSubmit={(event) => register(event)} className="register-form">
-          <div>
-            <h1 className="login-head">REGISTERs</h1>
-          </div>
-          {/* <label for="name">Name </label> */}
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-          ></input>
-          <br />
-          {/* <label for="email">Email </label> */}
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-          ></input>
-          <br />
-          {/* <label for="password">Password</label> */}
-          <input
-            type="password"
-            name="password"
-            id="pass"
-            placeholder="Password"
-          ></input>
-          <br />
-          {/* <label for="email"> Re-enter Password</label> */}
-          <input
-            type="password"
-            name="password"
-            id="re_pass"
-            placeholder="Re-enter Password"
-          ></input>
-          <br />
-          <button type="Submit"> Submit</button>
-        </form>
-      </div>
+    <div className="full">
+      <div className="register-bg">
+        <div className="register">
+          <form onSubmit={(event) => register(event)} className="register-form">
+            <div>
+              <h1 className="login-head">REGISTER</h1>
+            </div>
+            {/* <label for="name">Name </label> */}
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            ></input>
+            <br />
+            {/* <label for="email">Email </label> */}
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            ></input>
+            <br />
+            {/* <label for="password">Password</label> */}
+            <input
+              type="password"
+              name="password"
+              id="pass"
+              placeholder="Password"
+            ></input>
+            <br />
+            {/* <label for="email"> Re-enter Password</label> */}
+            <input
+              type="password"
+              name="password"
+              id="re_pass"
+              placeholder="Re-enter Password"
+            ></input>
+            <br />
+            <button type="Submit"> Submit</button>
+          </form>
+        </div>
 
-      <div>
-        <Link className="link" to="/auth/login">
-          Ready to Sign In?
-        </Link>
+        <div>
+          <Link className="link" to="/auth/login">
+            Ready to Sign In?
+          </Link>
+        </div>
       </div>
     </div>
   );

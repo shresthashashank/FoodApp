@@ -8,13 +8,13 @@ function RestaurantCards(props) {
   function handleClick() {
     // var restaurantID = props.id;
     history.push(`/main/restaurants/details/${props.id}`);
-    console.log("ID" + props.id);
+    console.log("ID is" + props.id);
   }
   return (
     <div onClick={handleClick}>
       <div className="card">
         <div className="logo">
-          <img className="brand_logo" src={props.image} alt="image"></img>
+          <img className="brand_logo" src={props.image} alt="img"></img>
         </div>
         <div className="restaurant_name">
           {props.name}

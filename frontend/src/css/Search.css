@@ -27,3 +27,8 @@
   top: 30%;
   left: 77%;
 }
+input {
+  outline: none;
+  margin: 10px 0;
+  padding: 10px 15px;
+}

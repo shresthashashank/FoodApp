@@ -97,11 +97,13 @@ export default function CustomizedDialogs(props) {
           </Typography>
 
           <Typography gutterBottom>
-            Pizza, dish of Italian origin consisting of a flattened disk of
-            bread dough topped with some combination of olive oil, oregano,
-            tomato, olives, mozzarella or other cheese, and many other
-            ingredients, baked quickly—usually, in a commercial setting, using a
-            wood-fired oven heated to a very high temperature—and served hot ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
           </Typography>
         </DialogContent>
         <DialogActions>

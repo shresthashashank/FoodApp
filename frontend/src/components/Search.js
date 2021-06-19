@@ -6,12 +6,14 @@ import {
   useParams,
 } from "react-router-dom";
 import axios from "axios";
+import Navbarsearched from "./Navbarsearched";
 import Navbarlogin from "./Navbarlogin";
 import RestaurantCards from "./RestaurantCards";
 
 import Searchbarlogin from "./Seachbarlogin";
 
-function Search() {
+function Search(props) {
+  const status = props.status;
   let foodNametest = "";
   var filtered_foodName = "";
   var filtered_restaurant_name;
@@ -52,7 +54,11 @@ function Search() {
   return (
     <div>
       <div className="navbarlogin">
-        <Navbarlogin greeting="SIGN IN " />
+        {status ? (
+          <Navbarlogin greeting="Logout" />
+        ) : (
+          <Navbarsearched greeting="Sign In" />
+        )}
         <Searchbarlogin />
       </div>
       <br />

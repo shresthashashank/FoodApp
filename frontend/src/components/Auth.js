@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../css/auth.css";
 import axios from "axios";
+
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 const bcrypt = require("bcryptjs");
 
+export const ThemeContext = React.createContext();
+
 function Auth(props) {
   const history = useHistory();
+  const [loggedIn, setLoggedIn] = useState(false);
+  console.log("lg:" + loggedIn);
   // const [email, setEmail] = useState("");
 
   // function handleChange(event) {
@@ -40,9 +45,12 @@ function Auth(props) {
           console.log(res.data);
         }
         var isLoggedinvalue = isLoggedIn;
+        console.log("Logged in value is " + isLoggedinvalue);
 
-        //Passing the value back to the parent component app.
+        //Passing the value back to the parent component app which is in App.js
         props.data(isLoggedIn);
+
+        setLoggedIn(isLoggedIn);
 
         isLoggedinvalue ? history.push("/profile") : alert(res.data.message);
       })
@@ -53,6 +61,7 @@ function Auth(props) {
 
   return (
     <div className="authbg">
+      <ThemeContext.Provider value={loggedIn}></ThemeContext.Provider>
       <div className="login">
         <form onSubmit={login} className="login-form">
           <div>
@@ -79,8 +88,8 @@ function Auth(props) {
             placeholder="Password"
           ></input>
           <br />
-
           <br />
+
           <button>Login</button>
         </form>
       </div>

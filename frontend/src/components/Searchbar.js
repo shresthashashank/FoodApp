@@ -58,6 +58,7 @@ function Searchbar() {
           <img
             className="search-icon"
             src="https://cdn4.iconfinder.com/data/icons/round-buttons/512/red_search.png"
+            alt="img"
           ></img>
         </button>
       </form>
