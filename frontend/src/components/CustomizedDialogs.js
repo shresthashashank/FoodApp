@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -6,6 +6,7 @@ import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
 import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
+import "../css/restaurantfull.css";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
@@ -57,23 +58,30 @@ const DialogActions = withStyles((theme) => ({
 
 export default function CustomizedDialogs(props) {
   const [open, setOpen] = React.useState(false);
+
+  const [cart, setCart] = useState([]);
   const history = useHistory();
 
   function gotocart() {
+    console.log("We are in gotcart");
     history.push("/main/cart");
   }
 
-  const handleClickOpen = () => {
+  const handleClickOpens = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
 
+  // function gotocart1(x) {
+  //   console.log("We are in gotcart:" + x.menu);
+  //   // history.push("/main/cart");
+  // }
   return (
     <div>
-      <Button variant="none" color="" onClick={handleClickOpen}>
-        Order Online
+      <Button variant="none" color="" onClick={handleClickOpens}>
+        {props.text}
       </Button>
       <Dialog
         onClose={handleClose}
@@ -91,9 +99,9 @@ export default function CustomizedDialogs(props) {
           <Typography gutterBottom>Menu: {props.menu}</Typography>
           <Typography gutterBottom>
             Price: {props.price}
-            <Button autoFocus color="primary">
-              Add to Cart
-            </Button>
+            {/* <Button autoFocus color="primary">
+              Add to Carts
+            </Button> */}
           </Typography>
 
           <Typography gutterBottom>
@@ -103,11 +111,26 @@ export default function CustomizedDialogs(props) {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            culpa qui officia deserunt mollit anim id est laborums
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={gotocart} autoFocus color="primary">
+          {/* <Button onClick={carthandle(props.name)} autoFocus color="primary">
+            Go to Cart
+          </Button> */}
+          <Button
+            // className="modal-btn"
+            autoFocus
+            color="primary"
+          >
+            Add to cart
+          </Button>
+          <Button
+            onClick={gotocart}
+            // className="modal-btn"
+            autoFocus
+            color="primary"
+          >
             Go to Cart
           </Button>
         </DialogActions>

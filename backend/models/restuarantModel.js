@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 
 //Creating a resturant model
 const restaurantsSchema = new mongoose.Schema({
+  // _id: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  // },
   name: {
     type: String,
     required: "Please enter the name of the resaurant",

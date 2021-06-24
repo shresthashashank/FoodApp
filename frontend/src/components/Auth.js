@@ -96,7 +96,7 @@ function Auth(props) {
 
       <div className="signuplink">
         <Link className="links" to="/auth/register">
-          Sign UP
+          <h2>Sign Up</h2>
         </Link>
       </div>
     </div>

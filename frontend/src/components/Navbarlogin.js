@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import "../css/Navbarlogin.css";
 
 function Navbarlogin(props) {
+  // function logoutHandler(props) {
+  //   props.data(false);
+  //   console.log("abra ka dabra" + props.data);
+  // }
+  console.log("Hello" + props.data);
+
   return (
     <div className="navBarLogin">
       <div className="nav-itemsLogin">

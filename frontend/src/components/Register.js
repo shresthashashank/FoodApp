@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "../css/auth.css";
+import "../css/register.css";
 
 function Register() {
   return (
@@ -12,7 +12,7 @@ function Register() {
             <div>
               <h1 className="login-head">REGISTER</h1>
             </div>
-            {/* <label for="name">Name </label> */}
+
             <input
               type="text"
               name="name"
@@ -20,7 +20,7 @@ function Register() {
               placeholder="Enter your name"
             ></input>
             <br />
-            {/* <label for="email">Email </label> */}
+
             <input
               type="email"
               name="email"
@@ -28,7 +28,7 @@ function Register() {
               placeholder="Enter your email"
             ></input>
             <br />
-            {/* <label for="password">Password</label> */}
+
             <input
               type="password"
               name="password"
@@ -36,7 +36,7 @@ function Register() {
               placeholder="Password"
             ></input>
             <br />
-            {/* <label for="email"> Re-enter Password</label> */}
+
             <input
               type="password"
               name="password"
@@ -44,13 +44,14 @@ function Register() {
               placeholder="Re-enter Password"
             ></input>
             <br />
+            <br />
             <button type="Submit"> Submit</button>
           </form>
         </div>
 
         <div>
           <Link className="link" to="/auth/login">
-            Ready to Sign In?
+            <h2>Ready to Sign In?</h2>
           </Link>
         </div>
       </div>

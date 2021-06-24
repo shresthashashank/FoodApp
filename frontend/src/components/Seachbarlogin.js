@@ -52,14 +52,13 @@ function Searchbarlogin() {
           name="location"
           placeholder="    location"
         ></input>
-
-        <button type="submit">
-          <img
-            className="search-icon_login"
-            src="https://cdn4.iconfinder.com/data/icons/round-buttons/512/red_search.png"
-          ></img>
-        </button>
       </form>
+      <button type="submit">
+        <img
+          className="search-icon_login"
+          src="https://cdn4.iconfinder.com/data/icons/round-buttons/512/red_search.png"
+        ></img>
+      </button>
     </div>
   );
 }

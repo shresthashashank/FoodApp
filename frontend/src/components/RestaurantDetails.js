@@ -12,10 +12,29 @@ function RestaurantDetails(props) {
   const status = props.loggedInStatus;
   console.log("ID from URL: " + ID);
   const url = "http://localhost:8001/restaurants/";
+  const reviewURL = "http://localhost:8001/reviews";
   console.log("Thee login status is : " + props.loggedInStatus);
   var filtered_restaurants = "";
+  var filtered_reviews = "";
 
   const [restaurantData, setRestaurantData] = useState([]);
+  // const [review, setReview] = useState([]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(reviewURL)
+  //     .then((res) => {
+  //       filtered_reviews = res.data.review.filter((y) => {
+  //         return y.restaurant_id === ID;
+  //       });
+  //       setReview(filtered_reviews);
+  //       console.log("reviewsattus: " + filtered_reviews);
+  //     })
+
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, [ID]);
 
   useEffect(() => {
     axios
@@ -32,7 +51,6 @@ function RestaurantDetails(props) {
         console.log(err);
       });
   }, [ID]);
-
   return (
     <div className="main">
       {status ? (
@@ -60,6 +78,18 @@ function RestaurantDetails(props) {
           />
         );
       })}
+
+      {/* {review.map((y) => {
+        return (
+          <RestaurantFull
+            key={y._id}
+            foodReview={y.food}
+            sereviceReview={y.service}
+            envReview={y.environment}
+            comment={y.comment}
+          />
+        );
+      })} */}
     </div>
   );
 }
